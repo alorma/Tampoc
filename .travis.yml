@@ -13,6 +13,6 @@ script: ./gradlew build
 
 deploy:
   provider: script
-  script: ./gradlew bintrayUpload -PbintrayUser=$BINTRAY_KEY -PbintrayKey=$BINTRAY_KEY -PdryRun=false
+  script: ./gradlew bintrayUpload -PbintrayUser=$BINTRAY_USERNAME -PbintrayKey=$BINTRAY_KEY -PdryRun=false
   on:
    tags: true
