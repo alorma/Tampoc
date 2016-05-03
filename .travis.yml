@@ -1,0 +1,18 @@
+language: android
+
+android:
+  components:
+   - tools
+   - build-tools-23.0.2
+   - android-23
+   - extra-android-m2repository
+  licenses:
+   - android-sdk-license-.+
+
+script: ./gradlew build
+
+deploy:
+  provider: script
+  script: ./gradlew bintrayUpload -PbintrayUser=$BINTRAY_KEY -PbintrayKey=$BINTRAY_KEY -PdryRun=false
+  on:
+   tags: true
