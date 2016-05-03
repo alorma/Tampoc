@@ -34,7 +34,7 @@ publish {
   userOrg = 'alorma'
   groupId = 'com.alorma'
   artifactId = 'tapmoc'
-  publishVersion = '0.0.1'
+  publishVersion = '0.0.1-Alpha'
   desc = 'Android compatibility helphers'
   website = 'https://github.com/alorma/Tapmoc'
 }
