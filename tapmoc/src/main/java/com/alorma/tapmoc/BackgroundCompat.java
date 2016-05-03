@@ -1,5 +1,6 @@
 package com.alorma.tapmoc;
 
+import android.annotation.TargetApi;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.view.View;
@@ -33,7 +34,8 @@ public class BackgroundCompat {
     }
   }
 
-  static class JellyBeanBackgroundCompatImpl implements BackgroundCompatImpl {
+  @TargetApi(Build.VERSION_CODES.JELLY_BEAN) static class JellyBeanBackgroundCompatImpl
+      implements BackgroundCompatImpl {
 
     @Override
     public void setBackground(View view, Drawable drawable) {
